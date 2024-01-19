@@ -1,0 +1,14 @@
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\bin\Debug\net8.0\ZeroToHero.HelloWorld.exe
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\bin\Debug\net8.0\ZeroToHero.HelloWorld.deps.json
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\bin\Debug\net8.0\ZeroToHero.HelloWorld.runtimeconfig.json
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\bin\Debug\net8.0\ZeroToHero.HelloWorld.dll
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\bin\Debug\net8.0\ZeroToHero.HelloWorld.pdb
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.AssemblyInfoInputs.cache
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.AssemblyInfo.cs
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.csproj.CoreCompileInputs.cache
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.dll
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\refint\ZeroToHero.HelloWorld.dll
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.pdb
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ZeroToHero.HelloWorld.genruntimeconfig.cache
+C:\Users\ACER\source\repos\ZeroToHero.Console\ZeroToHero.HelloWorld\obj\Debug\net8.0\ref\ZeroToHero.HelloWorld.dll
