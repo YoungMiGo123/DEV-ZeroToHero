@@ -1,4 +1,6 @@
-﻿namespace ZeroToHero.DecisionsAndIterations.PracticeWithTests
+﻿using System.Text;
+
+namespace ZeroToHero.DecisionsAndIterations.PracticeWithTests
 {
     public class Excercises
     {
@@ -27,7 +29,7 @@
         public static int CircuitPower(int voltage, int current)
         {
             //Create a function that takes voltage and current and returns the calculated power.
-            return 0;
+            return voltage * current;
         }
 
         /*
@@ -46,7 +48,8 @@
         public static double CalculateCompoundInterest(double principal, int years, double rate, int compoundsPerYear)
         {
             // Implement a function that calculates and returns the compound interest.
-            return 0.0;
+               var amount = principal * Math.Pow((1 + rate / compoundsPerYear), (compoundsPerYear * years));
+               return amount - principal;
         }
 
         /*
@@ -62,7 +65,21 @@
         public static bool ValidatePassword(string password)
         {
             // Implement a function that validates if a password meets the specified criteria.
-            return false;
+            if (password.Length < 8)
+            {
+                return false;
+            }
+            if(!password.Any(char.IsUpper) && !password.Any(char.IsLower) && !password.Any(char.IsDigit))
+            {
+                return false;
+            }
+            var specialCharacters = new char[] { '!', '@', '#', '$' };
+
+            if (!password.Any(char.IsSymbol) && !password.Any(x => specialCharacters.Contains(x)))
+            {
+                return false;
+            }
+            return true;
         }
 
         /*
@@ -75,8 +92,14 @@
         */
         public static string ReverseString(string input)
         {
+            var output = new StringBuilder();
+            for (int i = input.Length-1; i>= 0 ; i--)
+            {
+                output.Append(input[i]);
+            }
+            var result = output.ToString();
             // Implement a function that reverses the characters in the given string. Do not use linq
-            return null;
+            return result;
         }
 
         /*
@@ -95,8 +118,21 @@
         */
         public static int[] FindLargest(int[][] input)
         {
+            var output = new List<int>();
+            foreach(var array in input)
+            {
+                var max = int.MinValue;
+                foreach(var number in array)
+                {
+                    if(number > max)
+                    {
+                        max = number;
+                    }
+                }
+                output.Add(max);
+            }
             // Implement a function that finds and returns the largest integer in each subarray.
-            return null;
+            return [.. output];
         }
     }
 }

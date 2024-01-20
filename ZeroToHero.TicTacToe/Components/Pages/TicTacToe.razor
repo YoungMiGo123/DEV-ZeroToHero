@@ -31,8 +31,8 @@
         <div class="col-9">
             @if(_showMessage)
             {
-                <div class="alert alert-danger" role="alert">
-                    @_errorMessage
+                <div class="@_messageClassName" role="alert">
+                    @_message
                 </div>
             }
             <table border="2">
@@ -51,7 +51,8 @@
                                             class="btn btn-warning"
                                             id="@($"cell-{row}-{col}")"
                                             style="width: 80px; height: 80px"
-                                            @onclick="@(() => SetCell(currentRow, currentCol))">
+                                            @onclick="@(() => SetCell(currentRow, currentCol))"
+                                    >
                                         @if (_gameDriver.IsSquareTaken(currentRow, currentCol))
                                         {
                                             var square = _gameDriver.GetSquare(currentRow, currentCol);
@@ -80,19 +81,19 @@
 @code {
     private GameDriver _gameDriver { get; set; }
     private bool _showMessage { get; set; }
-    private string _errorMessage { get; set; }
-
+    private string _message { get; set; }
+    private string _messageClassName { get; set; }
     protected override void OnInitialized()
     {
         _gameDriver = new GameDriver();
         base.OnInitialized();
     }
-   
+
     public void SetCell(int row, int col)
     {
         if (_gameDriver.IsSquareTaken(row, col))
         {
-            ShowModal("Cell already taken!");
+            ShowModal("Cell already taken!", "alert alert-danger");
             return;
         }
         _showMessage = false;
@@ -102,6 +103,13 @@
                 Row = row,
                 Symbol = _gameDriver.CurrentPlayer.Symbol
             });
+
+        if (_gameDriver.IsGameOver())
+        {
+            ShowModal($"Game Over! {_gameDriver.CurrentPlayer.Symbol} Wins!", "alert alert-success");
+            ResetGame();
+            return;
+        }
         _gameDriver.SwitchPlayers();
     }
 
@@ -109,10 +117,11 @@
     {
         _gameDriver.ResetGame();
     }
-    private void ShowModal(string message)
+    private void ShowModal(string message, string className)
     {
-        _errorMessage = message;
+        _message = message;
         _showMessage = true;
+        _messageClassName = className;  
     }
 
 }

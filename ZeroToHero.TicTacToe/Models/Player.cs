@@ -1,35 +1,45 @@
 ﻿namespace ZeroToHero.TicTacToe.Models
 {
-    public class Player(char symbol, string name, bool isCurrentlyPlaying, int id)
+    public class Player
     {
-        public int Id { get; set; } = id;
-        private readonly Score _score = new();
-        public char Symbol { get; set; } = symbol;
-        public string Name { get; set; } = name;
-        public bool IsCurrentlyPlaying { get; set; } = isCurrentlyPlaying;
+        public Player(char symbol, string name, bool isCurrentlyPlaying, int id)
+        {
+            Symbol = symbol;
+            Name = name;
+            IsCurrentlyPlaying = isCurrentlyPlaying;
+            Id = id;
+            Score = new Score();
+        }
+        public int Id { get; set; }
+        public Score Score { get; set; }
+        public char Symbol { get; set; } 
+        public string Name { get; set; } 
+        public bool IsCurrentlyPlaying { get; set; } 
 
-       
+        public void SetScore(Score score)
+        {
+            Score = score;
+        }
         public void SetCurrentlyPlaying(bool isCurrentlyPlaying)
         {
             IsCurrentlyPlaying = isCurrentlyPlaying;
         }
         public void AddWin()
         {
-            _score.IncrementWins();
+            Score.IncrementWins();
         }
         public void AddDraw()
         {
-            _score.IncrementDraws();
+            Score.IncrementDraws();
         }
         public void AddLoss()
         {
-            _score.IncrementLosses();
+            Score.IncrementLosses();
         }
         public void ResetScore()
         {
-            _score.Reset();
+            Score.Reset();
         }
-        public Score Score => _score;
         
     }
 }

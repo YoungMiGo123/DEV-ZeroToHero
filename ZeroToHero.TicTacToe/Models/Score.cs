@@ -2,12 +2,11 @@
 {
     public class Score
     {
-        public int Wins { get; private set; }
-        public int Losses { get; private set; }
-        public int Draws { get; private set; }
+        public int Wins { get;  set; }
+        public int Losses { get;  set; }
+        public int Draws { get;  set; }
         public Score()
         {
-            Reset();
         }
         public void IncrementWins()
         {

@@ -6,6 +6,10 @@
     {
         public class Engine
         {
+            public void TurnOff()
+            {
+                Console.WriteLine("Engine turned off.");
+            }
             public void Start()
             {
                 Console.WriteLine("Engine started.");
@@ -21,12 +25,18 @@
                 _engine.Start();
                 Console.WriteLine("Car started.");
             }
+            public void StopCar()
+            {
+                _engine.TurnOff();
+                Console.WriteLine("Car stopped.");
+            }
         }
 
         public static void BuildExample()
         {
             var myCar = new Car();
             myCar.StartCar();
+            myCar.StopCar();
         }
     }
 

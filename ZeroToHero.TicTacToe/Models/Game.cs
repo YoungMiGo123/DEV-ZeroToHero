@@ -31,23 +31,27 @@
         }
         public bool IsGameOver()
         {
-            // To do: Implement this method
-            return false;
+            return GetWinner() is not null || IsDraw();
         }
         public bool IsDraw()
         {
-            // To do: Implement this method
-            return false;
+            var currentPlayer = _players.First(player => player.IsCurrentlyPlaying);
+            return !_board.IsWinningMove(currentPlayer.Symbol) && _board.IsFull();
         }
 
-        public Player GetWinner()
+        public Player? GetWinner()
         {
-            // To do: Implement this method
-            return null;
+            var currentPlayer = _players.First(player => player.IsCurrentlyPlaying);
+            var isWinningMove = _board.IsWinningMove(currentPlayer.Symbol);
+            return isWinningMove ? currentPlayer : null;
         }
-        public Player GetLoser()
+        public Player? GetLoser()
         {
-            // To do: Implement this method
+            var winner = GetWinner();
+            if(winner is not null)
+            {
+                return _players.First(player => player.Id != winner.Id);
+            }
             return null;
         }
         public Board Board => _board;

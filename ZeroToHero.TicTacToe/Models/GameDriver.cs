@@ -3,7 +3,7 @@
     public class GameDriver
     {
         public Game Game { get; set; }
-        public List<Player> Players => [ new('X', "Player 1", true, 1), new('O', "Player 2", false, 2) ];
+        public List<Player> Players { get; set; } = [new('X', "Player 1", true, 1), new('O', "Player 2", false, 2)];
         public GameDriver()
         {
             Game = new Game(new Board(), Players);
@@ -18,9 +18,31 @@
         }
         public void ResetGame()
         {
-            Game.GetWinner()?.AddWin();
-            Game.GetLoser()?.AddLoss(); 
+            if (!Game.IsDraw())
+            {
+
+               var winner = Game.GetWinner();
+               winner.AddWin();
+
+               var loser = Players.First(player => player.Id != winner.Id);
+               loser.AddLoss();
+
+               Players = Players.Select(player =>
+               {
+                   player.SetCurrentlyPlaying(player.Id == winner.Id);
+                   return player;
+               }).ToList();
+            }
+            else
+            {
+                Game.Players.ForEach(player => player.AddDraw());
+            }
+
             Game = new Game(new Board(), Players);
+        }
+        public bool IsGameOver()
+        {
+            return Game.IsGameOver();
         }
         public Player GetWinner()
         {
