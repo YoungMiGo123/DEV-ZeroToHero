@@ -1,0 +1,36 @@
+﻿@using ZeroToHero.TicTacToe.Models;
+
+<div class="card" style="width: 18rem; margin-left: 20px; color: @Color">
+    <img src="https://via.placeholder.com/60"
+         class="card-img-top rounded-circle mx-auto mt-3" 
+         style="width: 90px;" 
+         alt="Player Image" 
+         id="profilePic"
+    >
+
+    <div class="card-body" style="text-align: left">
+        <h5 class="card-title">@Player.Name</h5>
+        <p class="card-text">
+            <strong>Symbol:</strong> @Player.Symbol
+        </p>
+        <p class="card-text">
+            <strong>Currently Playing:</strong> @Player.IsCurrentlyPlaying
+        </p>
+        <p class="card-text">
+            <strong>Wins:</strong> @Player.Score.Wins
+        </p>
+        <p class="card-text">
+            <strong>Losses:</strong> @Player.Score.Losses
+        </p>
+        <p class="card-text">
+            <strong>Draws:</strong> @Player.Score.Draws
+        </p>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Player Player { get; set; }
+    [Parameter]
+    public string Color { get; set; }
+}
