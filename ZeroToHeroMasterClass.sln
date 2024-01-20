@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.OOP.Console", "Z
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.TicTacToe", "ZeroToHero.TicTacToe\ZeroToHero.TicTacToe.csproj", "{25444DAD-7CC6-41EF-8C47-435439F32CC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroToHero.OOP.PracticeWithTests", "ZeroToHero.OOP.PracticeWithTests\ZeroToHero.OOP.PracticeWithTests.csproj", "{97FA61A4-F4AB-4DAB-94BA-1A3AED650C49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97FA61A4-F4AB-4DAB-94BA-1A3AED650C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FA61A4-F4AB-4DAB-94BA-1A3AED650C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FA61A4-F4AB-4DAB-94BA-1A3AED650C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FA61A4-F4AB-4DAB-94BA-1A3AED650C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{509C3C25-10ED-4273-99C1-97BA22D7526E} = {0B7201C9-56A8-442F-8324-63FB8B94AE67}
 		{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B} = {509C3C25-10ED-4273-99C1-97BA22D7526E}
 		{25444DAD-7CC6-41EF-8C47-435439F32CC2} = {509C3C25-10ED-4273-99C1-97BA22D7526E}
+		{97FA61A4-F4AB-4DAB-94BA-1A3AED650C49} = {509C3C25-10ED-4273-99C1-97BA22D7526E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B4CBC0E-4F31-47FE-AD4A-529D5EEA65E1}

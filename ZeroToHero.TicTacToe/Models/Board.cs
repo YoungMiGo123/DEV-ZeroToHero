@@ -1,4 +1,5 @@
-﻿namespace ZeroToHero.TicTacToe.Models
+﻿
+namespace ZeroToHero.TicTacToe.Models
 {
     public class Square 
     {
@@ -37,6 +38,65 @@
                 }
             }
         }
+        public bool IsWinningMove(char symbol)
+        {
+            return IsWinningRow(symbol) || IsWinningCol(symbol) || IsWinningDiagonal(symbol);
+        }
+
+        private bool IsWinningDiagonal(char symbol)
+        {
+            for(int row = 0; row < Rows; row++)
+            {
+                if (Squares[row, row].Symbol != symbol)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private bool IsWinningCol(char symbol)
+        {
+            for(int row = 0; row < Rows; row++)
+            {
+                var isWinningCol = true;
+                for(int col = 0; col < Cols; col++)
+                {
+                    if (Squares[col, row].Symbol != symbol)
+                    {
+                        isWinningCol = false;
+                        break;
+                    }
+                }
+                if (isWinningCol)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private bool IsWinningRow(char symbol)
+        {
+            for(int row = 0; row < Rows; row++)
+            {
+                var isWinningRow = true;
+                for(int col = 0; col < Cols; col++)
+                {
+                    if (Squares[row, col].Symbol != symbol)
+                    {
+                        isWinningRow = false;
+                        break;
+                    }
+                }
+                if (isWinningRow)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public bool IsFull()
         {
             for (int i = 0; i < Rows; i++)
@@ -49,6 +109,7 @@
                     }
                 }
             }
+
             return true;
         }
         public bool IsSquareTaken(int row, int col)

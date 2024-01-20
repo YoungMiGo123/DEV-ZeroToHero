@@ -9,23 +9,40 @@ namespace ZeroToHero.OOP.Console
 
     public class Abstraction
     {
+        public interface IShape
+        {
+            void DisplayInfo();
+        }
         public abstract class AbstractShape
         {
             public abstract void DisplayInfo();
         }
 
-        public class ConcreteShape : AbstractShape
+        public class ConcreteShape : IShape
         {
-            public override void DisplayInfo()
+            public void DisplayInfo()
             {
                 Console.WriteLine("This is a concrete example of abstraction.");
             }
         }
 
+        public class Circle : IShape
+        {
+            public void DisplayInfo()
+            {
+                Console.WriteLine("This is a circle."); 
+            }
+        }
+
         public static void BuildExample()
         {
-            var example = new ConcreteShape();
-            example.DisplayInfo();
+            IShape shape = new ConcreteShape();
+
+            shape.DisplayInfo();
+
+            shape = new Circle();
+            
+            shape.DisplayInfo();
         }
     }
 }

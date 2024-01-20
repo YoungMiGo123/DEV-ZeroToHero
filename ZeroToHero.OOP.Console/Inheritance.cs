@@ -6,25 +6,47 @@
     {
         public class Animal
         {
-            public void Eat()
+            public virtual void Eat()
             {
                 Console.WriteLine("Animal is eating.");
             }
         }
 
-        public class InheritedAnimal : Animal
+        public class Dog : Animal
         {
-            public void Sleep()
+            public void Bark()
             {
-                Console.WriteLine("Animal is sleeping.");
+                Console.WriteLine("Dog is barking");
+            }
+            public override void Eat()
+            {
+                Console.WriteLine("Eating chicken");
+            }
+        }
+        public class Fish : Animal
+        {
+            public void Swim()
+            {
+                Console.WriteLine("Fish is swimming.");
+            }
+            public override void Eat()
+            {
+                Console.WriteLine("Eating plankton");
             }
         }
 
         public static void BuildExample()
         {
-            var dog = new InheritedAnimal();
+            var animal = new Animal();
+            animal.Eat();
+            
+            var dog = new Dog();
             dog.Eat();
-            dog.Sleep();
+            dog.Bark();
+
+            var fish = new Fish();
+            fish.Eat();
+            fish.Swim();
         }
     }
 
