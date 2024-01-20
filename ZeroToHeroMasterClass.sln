@@ -15,9 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Module2", "Module2", "{0B72
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecisionsAndIteration", "DecisionsAndIteration", "{AC131007-DA2B-471C-A4D3-0D3E6DBE309D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroToHero.DecisionsAndIteration", "ZeroToHero.DecisionsAndIteration\ZeroToHero.DecisionsAndIteration.csproj", "{C70C2ECD-764F-4CFA-81B1-1DA08E5D089C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.DecisionsAndIteration", "ZeroToHero.DecisionsAndIteration\ZeroToHero.DecisionsAndIteration.csproj", "{C70C2ECD-764F-4CFA-81B1-1DA08E5D089C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroToHero.DecisionsAndIterations.PracticeWithTests", "ZeroToHero.DecisionsAndIterations.PracticeWithTests\ZeroToHero.DecisionsAndIterations.PracticeWithTests.csproj", "{7812758E-C330-40E9-A737-75D51A89B69A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.DecisionsAndIterations.PracticeWithTests", "ZeroToHero.DecisionsAndIterations.PracticeWithTests\ZeroToHero.DecisionsAndIterations.PracticeWithTests.csproj", "{7812758E-C330-40E9-A737-75D51A89B69A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ObjectOrientatedProgramming", "ObjectOrientatedProgramming", "{509C3C25-10ED-4273-99C1-97BA22D7526E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.OOP.Console", "ZeroToHero.OOP.Console\ZeroToHero.OOP.Console.csproj", "{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.TicTacToe", "ZeroToHero.TicTacToe\ZeroToHero.TicTacToe.csproj", "{25444DAD-7CC6-41EF-8C47-435439F32CC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,14 @@ Global
 		{7812758E-C330-40E9-A737-75D51A89B69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7812758E-C330-40E9-A737-75D51A89B69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7812758E-C330-40E9-A737-75D51A89B69A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25444DAD-7CC6-41EF-8C47-435439F32CC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +70,9 @@ Global
 		{AC131007-DA2B-471C-A4D3-0D3E6DBE309D} = {0B7201C9-56A8-442F-8324-63FB8B94AE67}
 		{C70C2ECD-764F-4CFA-81B1-1DA08E5D089C} = {AC131007-DA2B-471C-A4D3-0D3E6DBE309D}
 		{7812758E-C330-40E9-A737-75D51A89B69A} = {AC131007-DA2B-471C-A4D3-0D3E6DBE309D}
+		{509C3C25-10ED-4273-99C1-97BA22D7526E} = {0B7201C9-56A8-442F-8324-63FB8B94AE67}
+		{76D29DDC-14F7-49B8-B0E7-241D4BAFD03B} = {509C3C25-10ED-4273-99C1-97BA22D7526E}
+		{25444DAD-7CC6-41EF-8C47-435439F32CC2} = {509C3C25-10ED-4273-99C1-97BA22D7526E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B4CBC0E-4F31-47FE-AD4A-529D5EEA65E1}
