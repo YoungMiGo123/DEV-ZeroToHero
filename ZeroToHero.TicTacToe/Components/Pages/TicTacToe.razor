@@ -9,6 +9,7 @@
         <br />
         <h3>TicTacToeGame</h3>
         <hr />
+        <br />
     </div>
 
     <div class="row">
@@ -24,12 +25,9 @@
             <div class="mt-2">
                 <PlayerCard Player="@_gameDriver.CurrentPlayer" Color="@(_gameDriver.CurrentPlayer.Symbol == 'X' ? "#3498db" : "#e74c3c")" />
             </div>
-            
-
-
         </div>
         <div class="col-9">
-            @if(_showMessage)
+            @if (_showMessage)
             {
                 <div class="@_messageClassName" role="alert">
                     @_message
@@ -51,8 +49,7 @@
                                             class="btn btn-warning"
                                             id="@($"cell-{row}-{col}")"
                                             style="width: 80px; height: 80px"
-                                            @onclick="@(() => SetCell(currentRow, currentCol))"
-                                    >
+                                            @onclick="@(() => SetCell(currentRow, currentCol))">
                                         @if (_gameDriver.IsSquareTaken(currentRow, currentCol))
                                         {
                                             var square = _gameDriver.GetSquare(currentRow, currentCol);
@@ -121,7 +118,7 @@
     {
         _message = message;
         _showMessage = true;
-        _messageClassName = className;  
+        _messageClassName = className;
     }
 
 }

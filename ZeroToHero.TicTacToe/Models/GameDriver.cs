@@ -27,11 +27,7 @@
                var loser = Players.First(player => player.Id != winner.Id);
                loser.AddLoss();
 
-               Players = Players.Select(player =>
-               {
-                   player.SetCurrentlyPlaying(player.Id == winner.Id);
-                   return player;
-               }).ToList();
+               Players = new List<Player> { winner, loser };    
             }
             else
             {
