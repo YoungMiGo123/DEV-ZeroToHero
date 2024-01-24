@@ -5,7 +5,6 @@
     using System.IO;
     /* 
    Problem: Implement the IFileWrite - WriteToFile method to write the contents of a string to a file.
-
    */
     public interface IFileWriter
     {
