@@ -1,5 +1,4 @@
-﻿using System.Globalization;
-using ZeroToHero.Interfaces.Chess.Models;
+﻿using ZeroToHero.Interfaces.Chess.Models;
 using ZeroToHero.Interfaces.Chess.Services.Interfaces;
 
 namespace ZeroToHero.Interfaces.Chess.Services.Implementations

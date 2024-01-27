@@ -18,7 +18,14 @@ namespace ZeroToHero.Interfaces.Chess.Models
                 return (false, "You cannot move twice in a row");
             }
 
-            var pieceTypes = new List<ChessPieceType> { ChessPieceType.Pawn, ChessPieceType.Bishop, ChessPieceType.Rook, ChessPieceType.King, ChessPieceType.Knight };
+            var pieceTypes = new List<ChessPieceType> { 
+                ChessPieceType.Queen,
+                ChessPieceType.Pawn, 
+                ChessPieceType.Bishop, 
+                ChessPieceType.Rook, 
+                ChessPieceType.King, 
+                ChessPieceType.Knight
+            };
 
             if (!pieceTypes.Contains(piece.Type))
             {

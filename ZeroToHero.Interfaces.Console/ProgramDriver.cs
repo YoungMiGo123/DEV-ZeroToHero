@@ -4,12 +4,11 @@
     {
         public static void Drive()
         {
-            LoggerInterfaces.BuildLoggerExample();
-            NotificationInterfaces.BuildNotificationExample();
-            DataStorageInterfaces.BuildStorageExample();
-            MultiMediaInterfaces.BuildMultiMediaExample();
-            PaymentInterfaces.BuildPaymentProcessorExample();
-            NotificationInterfaces.BuildNotificationExample();
+            //LoggerInterfaces.BuildLoggerExample();
+            //NotificationInterfaces.BuildNotificationExample();
+            //DataStorageInterfaces.BuildStorageExample();
+            //MultiMediaInterfaces.BuildMultiMediaExample();
+            //PaymentInterfaces.BuildPaymentProcessorExample();
             VehicleDealerAbstractClass.BuildVehicleDealerExample();
         }
     }
