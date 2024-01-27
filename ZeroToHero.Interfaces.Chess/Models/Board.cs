@@ -13,8 +13,8 @@ namespace ZeroToHero.Interfaces.Chess.Models
         {
             InitializeBoard();
             //DisabledAllExcept("A8,B8,C8,F8,G8,H8,E8,A1,C1,B1,F1,G1,H1,E1");
-            DisabledAllExcept("E8,A1,C1,B1,F1,G1,H1,E1");
-
+            //DisabledAllExcept("E8,A1,C1,B1,F1,G1,H1,E1");
+            //DisabledAllExcept("A1,A8,F1,F8,D1,D8");
         }
 
         private void InitializeBoard()

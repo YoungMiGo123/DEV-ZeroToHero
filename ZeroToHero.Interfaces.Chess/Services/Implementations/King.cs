@@ -30,7 +30,7 @@ namespace ZeroToHero.Interfaces.Chess.Services.Implementations
             }
 
             // Define the possible moves for a king using Direction
-            var moves = new List<Direction>
+            var directions = new List<Direction>
             {
                 new(0, 1),   // One square up
                 new(0, -1),  // One square down
@@ -45,10 +45,10 @@ namespace ZeroToHero.Interfaces.Chess.Services.Implementations
             var opponentColor = color == ChessPieceColor.White ? ChessPieceColor.Black : ChessPieceColor.White;
 
             // Check possible moves
-            foreach (var move in moves)
+            foreach (var direction in directions)
             {
-                int newFile = currentTile.Position[0] + move.FileChange;
-                int newRank = int.Parse($"{currentTile.Position[1]}", CultureInfo.InvariantCulture) + move.RankChange;
+                int newFile = currentTile.Position[0] + direction.FileChange;
+                int newRank = int.Parse($"{currentTile.Position[1]}", CultureInfo.InvariantCulture) + direction.RankChange;
 
                 if (AvailableMovesHelper.IsMoveValid(board, newFile, newRank, opponentColor))
                 {
@@ -72,7 +72,9 @@ namespace ZeroToHero.Interfaces.Chess.Services.Implementations
             }
 
             // Check if any opponent's piece has a valid move to capture the king
-            foreach (var tile in board.Squares.Where(x => x.IsOccupied && x.Piece?.Color != Color))
+            var opponentColor = Color == ChessPieceColor.White ? ChessPieceColor.Black : ChessPieceColor.White;
+            var opponentPieces = board.GetChessPiecesByColor(opponentColor);
+            foreach (var tile in opponentPieces)
             {
                 var opponentPiece = tile.Piece;
                 var opponentMoves = opponentPiece?.GetPossibleMoves(board);

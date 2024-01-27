@@ -24,12 +24,24 @@
             }
         }
 
+        public class PushNotification : INotification
+        {
+            public void SendNotification(string message)
+            {
+                // Implement logic to send a push notification
+                Console.WriteLine($"Sending push notification: {message}");
+            }
+        }
+
         public static void BuildNotificationExample()
         {
             INotification notification = new EmailNotification();
             notification.SendNotification("This is a notification.");
 
             notification = new SmsNotification();
+            notification.SendNotification("This is a notification.");
+
+            notification = new PushNotification();
             notification.SendNotification("This is a notification.");
         }
     }

@@ -131,12 +131,16 @@ namespace ZeroToHero.Interfaces.Chess.Models
             var kingPiece = CurrentPlayer.Color == ChessPieceColor.White ?
                              Board
                             .Squares
-                            .First(x => x.IsOccupied && x?.Piece?.Type == ChessPieceType.King && x.Piece.Color == ChessPieceColor.White)
+                            .FirstOrDefault(x => x.IsOccupied && x?.Piece?.Type == ChessPieceType.King && x.Piece.Color == ChessPieceColor.White)
                             :
                              Board
                             .Squares
-                            .First(x => x.IsOccupied && x?.Piece?.Type == ChessPieceType.King && x.Piece.Color == ChessPieceColor.Black);
+                            .FirstOrDefault(x => x.IsOccupied && x?.Piece?.Type == ChessPieceType.King && x.Piece.Color == ChessPieceColor.Black);
 
+            if (kingPiece is null)
+            {
+                return new KingInDanger { Message = "No danger", Type = KingInDangerType.None };
+            }
             var king = kingPiece.Piece as IKing;
 
             if (king.IsChecked(Board))
