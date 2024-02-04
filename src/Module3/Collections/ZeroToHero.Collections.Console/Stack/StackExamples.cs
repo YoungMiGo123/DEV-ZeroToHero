@@ -2,9 +2,26 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Text;
 
     public class StackExamples
     {
+        public static string ReverseString(string input)
+        {
+            Stack<char> characters = new(); 
+            foreach (char c in input)
+            {
+                characters.Push(c);
+            }
+
+            StringBuilder stringBuilder = new();
+
+            while(characters.Count > 0)
+            {
+                stringBuilder.Append(characters.Pop());
+            }
+            return stringBuilder.ToString();    
+        }
         public static void EasyExample()
         {
             Stack<int> numbers = new();
@@ -52,6 +69,8 @@
 
         public static void BuildExamples()
         {
+            var input = "Hello, World!";    
+            Console.WriteLine($"Reversed string: {ReverseString(input)}");
             EasyExample();
             MediumExample();
             ComplexExample();

@@ -45,8 +45,8 @@
 
             // Union of interests
             HashSet<string> combinedInterests = new HashSet<string>(myInterests);
-            combinedInterests.UnionWith(friend1Interests);
-            combinedInterests.UnionWith(friend2Interests);
+            combinedInterests.Union(friend1Interests);
+            combinedInterests.Union(friend2Interests);
 
             Console.WriteLine("Combined Interests with Friends:");
             foreach (var interest in combinedInterests)

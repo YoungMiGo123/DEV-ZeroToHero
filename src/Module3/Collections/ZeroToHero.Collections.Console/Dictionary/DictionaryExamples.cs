@@ -8,7 +8,7 @@
     {
         public static void EasyExample()
         {
-            Dictionary<int, string> employeeNames = new()
+            var employeeNames = new Dictionary<int, string>()
             {
                 { 1, "John" },
                 { 2, "Alice" },
@@ -24,8 +24,8 @@
 
         public static void MediumExample()
         {
-            Dictionary<string, int> wordOccurrences = new();
-            string[] words = { "apple", "banana", "apple", "orange", "banana", "apple" };
+            Dictionary<string, int> wordOccurrences = [];
+            string[] words = ["apple", "banana", "apple", "orange", "banana", "apple"];
 
             Console.WriteLine("Medium Dictionary Example:");
             foreach (var word in words)
@@ -50,12 +50,13 @@
         {
             // Real-world example: Managing employee information
             Console.WriteLine("Complex Dictionary Example:");
-            Dictionary<string, Employee> employeeDatabase = new();
-
-            employeeDatabase.Add("JohnDoe", new Employee("John Doe", 35, "Software Engineer"));
-            employeeDatabase.Add("AliceSmith", new Employee("Alice Smith", 28, "UX Designer"));
-            employeeDatabase.Add("BobJohnson", new Employee("Bob Johnson", 40, "Project Manager"));
-
+            Dictionary<string, Employee> employeeDatabase = new()
+            {
+                { "JohnDoe", new Employee("John Doe", 35, "Software Engineer") },
+                { "AliceSmith", new Employee("Alice Smith", 28, "UX Designer") },
+                { "BobJohnson", new Employee("Bob Johnson", 40, "Project Manager") }
+            };
+            
             foreach (var kvp in employeeDatabase)
             {
                 Console.WriteLine($"Employee: {kvp.Value.Name}, Age: {kvp.Value.Age}, Role: {kvp.Value.Role}");

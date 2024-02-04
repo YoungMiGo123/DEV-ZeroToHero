@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.Collections.Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroToHero.Collections.TodoApp", "src\Module3\Collections\ZeroToHero.Collections.TodoApp\ZeroToHero.Collections.TodoApp.csproj", "{CAB997F1-1873-467C-9425-6C682ECC331A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroToHero.Collections.PracticeWithTests", "src\Module3\Collections\ZeroToHero.Collections.PracticeWithTests\ZeroToHero.Collections.PracticeWithTests.csproj", "{C17E3045-5A83-4F2F-B9BE-1C5F67059BC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,6 +103,10 @@ Global
 		{CAB997F1-1873-467C-9425-6C682ECC331A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB997F1-1873-467C-9425-6C682ECC331A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB997F1-1873-467C-9425-6C682ECC331A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C17E3045-5A83-4F2F-B9BE-1C5F67059BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C17E3045-5A83-4F2F-B9BE-1C5F67059BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C17E3045-5A83-4F2F-B9BE-1C5F67059BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C17E3045-5A83-4F2F-B9BE-1C5F67059BC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{A3927C14-D3D8-44AD-8BF0-EC7C1FF45FE5} = {509C3C25-10ED-4273-99C1-97BA22D7526E}
 		{64A235B1-0701-4AEA-8B01-CD7F479E2944} = {FFEC3E02-AE05-4CFF-8851-1A44E54A8E8B}
 		{CAB997F1-1873-467C-9425-6C682ECC331A} = {FFEC3E02-AE05-4CFF-8851-1A44E54A8E8B}
+		{C17E3045-5A83-4F2F-B9BE-1C5F67059BC1} = {FFEC3E02-AE05-4CFF-8851-1A44E54A8E8B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B4CBC0E-4F31-47FE-AD4A-529D5EEA65E1}

@@ -23,7 +23,23 @@
 
         public static void MediumExample()
         {
+      
             // Medium example for SortedList is omitted for brevity
+            Console.WriteLine("Medium SortedList Example:");
+
+            // Priority service for bookings 
+            SortedList<Priortity, string> priorityService = new()
+            {
+                { Priortity.Bronze, "Bronze" },
+                { Priortity.Silver, "Silver" },
+                { Priortity.Platinum, "Platinum" },
+                { Priortity.Gold, "Gold" },
+            };  
+
+            foreach (var kvp in priorityService)
+            {
+                Console.WriteLine($"Priority: {kvp.Value}, Order: {kvp.Key}");
+            }
         }
 
         public static void ComplexExample()
@@ -50,4 +66,11 @@
             ComplexExample();
         }
     }
+    enum Priortity
+    {
+        Gold,
+        Platinum,
+        Silver,
+        Bronze
+    };
 }
