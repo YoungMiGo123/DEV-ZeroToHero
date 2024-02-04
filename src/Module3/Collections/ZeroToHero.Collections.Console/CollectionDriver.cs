@@ -4,6 +4,7 @@
     using ZeroToHero.Collections.Console.Arrays;
     using ZeroToHero.Collections.Console.Dictionary;
     using ZeroToHero.Collections.Console.List;
+    using ZeroToHero.Collections.Console.ObservableCollection;
     using ZeroToHero.Collections.Console.Queue;
     using ZeroToHero.Collections.Console.SortedList;
     using ZeroToHero.Collections.Console.Stack;
@@ -12,12 +13,17 @@
     {
         public static void BuildAllExamples()
         {
+
+            Console.WriteLine("\nObeservable Examples:");
+            ObservableCollectionExamples.BuildExamples();
+
+            /*
             Console.WriteLine("Array Examples:");
             ArrayExamples.BuildExamples();
 
             Console.WriteLine("\nList Examples:");
             ListExamples.BuildExamples();
-
+       
             Console.WriteLine("\nDictionary Examples:");
             DictionaryExamples.BuildExamples();
 
@@ -32,6 +38,8 @@
 
             Console.WriteLine("\nHashset Examples:");
             HashSetExamples.BuildExamples();
+
+            */
         }
     }
 }

@@ -8,7 +8,7 @@
     {
         public static void EasyExample()
         {
-            List<int> numbers = new() { 1, 2, 3, 4, 5 };
+            List<int> numbers = [1, 2, 3, 4, 5];
             Console.WriteLine("Easy List Example:");
             foreach (var number in numbers)
             {
@@ -19,7 +19,7 @@
 
         public static void MediumExample()
         {
-            List<string> fruits = new() { "Apple", "Banana", "Orange" };
+            List<string> fruits = new List<string>() { "Apple", "Banana", "Orange" };
             Console.WriteLine("Medium List Example:");
             Console.WriteLine($"Total fruits: {fruits.Count}");
             Console.WriteLine($"First fruit: {fruits.FirstOrDefault()}");

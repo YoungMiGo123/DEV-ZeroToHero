@@ -5,9 +5,10 @@ namespace ZeroToHero.Collections.Console.ObservableCollection
 {
     public static class ObservableCollectionExamples
     {
-        public static void Run()
+        public static void BuildExamples()
         {
-            System.Console.WriteLine("Hello, World!");
+            
+            System.Console.WriteLine("Observable Collection example");
             // Creating an ObservableCollection of integers
             ObservableCollection<int> numbers = [];
 
