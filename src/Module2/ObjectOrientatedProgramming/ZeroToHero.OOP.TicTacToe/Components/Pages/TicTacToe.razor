@@ -1,0 +1,124 @@
+﻿@using ZeroToHero.TicTacToe.Models
+@page "/"
+@rendermode InteractiveServer
+
+
+<div class="container">
+
+    <div>
+        <br />
+        <h3>TicTacToeGame</h3>
+        <hr />
+        <br />
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="row">
+                <h4>Game Status And Controls</h4>
+                <div class="col-4">
+                    <button type="submit" class="btn btn-primary" @onclick="ResetGame">Quit</button>
+                </div>
+            </div>
+
+            <br />
+            <div class="mt-2">
+                <PlayerCard Player="@_gameDriver.CurrentPlayer" Color="@(_gameDriver.CurrentPlayer.Symbol == 'X' ? "#3498db" : "#e74c3c")" />
+            </div>
+        </div>
+        <div class="col-9">
+            @if (_showMessage)
+            {
+                <div class="@_messageClassName" role="alert">
+                    @_message
+                </div>
+            }
+            <table border="2">
+                @for (int row = 0; row < _gameDriver.Rows; row++)
+                {
+                    <tr>
+                        @for (int col = 0; col < _gameDriver.Cols; col++)
+                        {
+                            int currentRow = row;
+                            int currentCol = col;
+
+                            <td>
+                                @{
+                                    <button type="submit"
+                                            name="row"
+                                            class="btn btn-warning"
+                                            id="@($"cell-{row}-{col}")"
+                                            style="width: 80px; height: 80px"
+                                            @onclick="@(() => SetCell(currentRow, currentCol))">
+                                        @if (_gameDriver.IsSquareTaken(currentRow, currentCol))
+                                        {
+                                            var square = _gameDriver.GetSquare(currentRow, currentCol);
+
+                                            <span class="@(square.Symbol == 'X' ? "playerX" : "playerO")">
+                                                @square.Symbol
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            @("-")
+                                        }
+                                    </button>
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    private GameDriver _gameDriver { get; set; }
+    private bool _showMessage { get; set; }
+    private string _message { get; set; }
+    private string _messageClassName { get; set; }
+    protected override void OnInitialized()
+    {
+        _gameDriver = new GameDriver();
+        base.OnInitialized();
+    }
+
+    public void SetCell(int row, int col)
+    {
+        if (_gameDriver.IsSquareTaken(row, col))
+        {
+            ShowModal("Cell already taken!", "alert alert-danger");
+            return;
+        }
+        _showMessage = false;
+        _gameDriver.SetSquare(new TicTacToeModel
+            {
+                Col = col,
+                Row = row,
+                Symbol = _gameDriver.CurrentPlayer.Symbol
+            });
+
+        if (_gameDriver.IsGameOver())
+        {
+            ShowModal($"Game Over! {_gameDriver.CurrentPlayer.Symbol} Wins!", "alert alert-success");
+            ResetGame();
+            return;
+        }
+        _gameDriver.SwitchPlayers();
+    }
+
+    public void ResetGame()
+    {
+        _gameDriver.ResetGame();
+    }
+    private void ShowModal(string message, string className)
+    {
+        _message = message;
+        _showMessage = true;
+        _messageClassName = className;
+    }
+
+}
