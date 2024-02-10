@@ -12,8 +12,8 @@ namespace ZeroToHero.BestPractices.Console.CleanCoding
     {
         public static void Build()
         {
-            ApplyingCleanCode.Build();
             ViolatingCleanCode.Build();
+            ApplyingCleanCode.Build();
         }
     }
 }

@@ -6,12 +6,14 @@ using System.Linq;
 
 public class ApplyingCleanCode
 {
+    //// If its divisible by 8, print Zipp
     private static string MapInputToOutput(int number)
     {
         var map = new Dictionary<int, string>()
         {
             { 3, "Fizz" },
-            { 5, "Buzz" }
+            { 5, "Buzz" },
+            //{ 8, "Zipp" }
         };
         var response = string.Empty;
         foreach (var item in map)
@@ -25,7 +27,7 @@ public class ApplyingCleanCode
     }
     public static void FizzBuzz()
     {
-        var range = Enumerable.Range(1, 200).ToArray();
+        var range = Enumerable.Range(1, 10).ToArray();
 
         foreach (var currentNumber in range)
         {
@@ -37,6 +39,8 @@ public class ApplyingCleanCode
 
     public static void Build()
     {
+        Console.WriteLine("Applying Clean Code");
+
         FizzBuzz();
     }
 }

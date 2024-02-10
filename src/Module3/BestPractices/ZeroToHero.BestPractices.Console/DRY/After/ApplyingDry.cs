@@ -17,7 +17,7 @@ public class Calculator
 
     public int Subtract(int a, int b)
     {
-        return PerformOperation(a, b, (x, y) => x - y, "Subtracting");
+        return PerformOperation(a, b, (input1, input2) => input1 - input2, "Subtracting");
     }
 
     public int Multiply(int a, int b)
@@ -29,6 +29,7 @@ public class ApplyingDry
 {
     public static void Build()
     {
+        Console.WriteLine("ApplyingDry\n");
         var calculator = new Calculator();
 
         int result1 = calculator.Add(5, 3);
