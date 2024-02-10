@@ -41,6 +41,8 @@ namespace ZeroToHero.BestPractices.Console.SOLID
             LiskovSubstitutionViolationExample.Build();
             LiskovSubstitutionApplicationExample.Build();
         }
+
+
         private static void BuildDependencyInversion()
         {
             DependencyInversionViolationExample.Build();
