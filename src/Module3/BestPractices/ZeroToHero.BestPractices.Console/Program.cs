@@ -4,8 +4,8 @@ using ZeroToHero.BestPractices.Console.KISS;
 using ZeroToHero.BestPractices.Console.SOLID;
 using ZeroToHero.BestPractices.Console.YAGNI;
 
-SolidDriver.Build();
-DryDriver.Build();
-YagniDriver.Build();
-KissDriver.Build();
+//SolidDriver.Build();
+//DryDriver.Build();
+//YagniDriver.Build();
+//KissDriver.Build();
 CleanCodeDriver.Build();

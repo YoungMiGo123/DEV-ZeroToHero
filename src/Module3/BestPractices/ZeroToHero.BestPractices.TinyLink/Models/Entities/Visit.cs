@@ -3,7 +3,6 @@
 
     public class Visit : Entity
     {
-        public Guid Id { get; set; }
         public int Count { get; set; }
         public string? IPAddress { get; set; }
         public string? Device { get; set; }

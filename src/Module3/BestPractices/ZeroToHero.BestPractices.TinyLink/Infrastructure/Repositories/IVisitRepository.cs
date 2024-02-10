@@ -3,11 +3,11 @@ using ZeroToHero.BestPractices.TinyLink.Models.Entities;
 
 namespace ZeroToHero.BestPractices.TinyLink.Infrastructure.Repositories
 {
-    public interface ITinyLinkRepository
+    public interface IVisitRepository
     {
-        Task<Link> AddLink(Link link);
-        Task<Link> GetTinyLinkByHash(string hash);
+        Task<Visit> AddVisit(Visit visit);
+        Task<Visit> GetVisitByQuery(VisitQuery query);
         Task<bool> SaveChanges();
-        Task<Link> UpdateLink(Link link);
+        Task<Visit> UpdateVisit(Visit visit);
     }
 }

@@ -12,8 +12,8 @@ namespace ZeroToHero.BestPractices.Console.KISS
     {
         public static void Build()
         {
-            ApplyingKiss.Build();
             ViolatingKiss.Build();
+            ApplyingKiss.Build();
         }
     }
 }

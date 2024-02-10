@@ -7,7 +7,8 @@ using ZeroToHero.BestPractices.Console.SOLID.OpenClosed.Before;
 public enum ProductType
 {
     Electronics,
-    Clothing
+    Clothing,
+    Homeware
 }
 public interface IDiscountCalculator
 {
@@ -66,11 +67,16 @@ public class DiscountService
 
 public class HomewareDiscountCalculator : IDiscountCalculator
 {
-    public ProductType Type { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public ProductType Type { get; set; } = ProductType.Homeware; 
 
     public decimal CalculateDiscount(Product product)
     {
-        throw new NotImplementedException();
+
+        if (product.Type != Type)
+        {
+            return 0;
+        }
+        return product.Price * 0.15m; // 15% discount for homeware
     }
 }
 public class OpenClosedApplicationExample
@@ -83,13 +89,14 @@ public class OpenClosedApplicationExample
         {
             new() { Name = "Laptop", Price = 1000, Type = ProductType.Electronics },
             new() { Name = "T-Shirt", Price = 20, Type = ProductType.Clothing  },
+            new() {Name = "Chair", Price = 500, Type = ProductType.Homeware }
         };
 
         var discountCalculators = new List<IDiscountCalculator>
         {
             new ElectronicsDiscountCalculator(),
             new ClothingDiscountCalculator(),
-            //new HomewareDiscountCalculator()
+            new HomewareDiscountCalculator()
         };
 
         var discountService = new DiscountService(discountCalculators);

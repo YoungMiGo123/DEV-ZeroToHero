@@ -1,5 +1,5 @@
 ﻿
-namespace ZeroToHero.BestPractices.Console.SOLID.InterfaceSegregation.Before;
+namespace ZeroToHero.BestPractices.Console.SOLID.InterfaceSegregation.After;
 
 using System;
 

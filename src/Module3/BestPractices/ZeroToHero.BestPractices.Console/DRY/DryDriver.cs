@@ -12,8 +12,8 @@ namespace ZeroToHero.BestPractices.Console.DRY
     {
         public static void Build()
         {
-            ApplyingDry.Build();
             ViolatingDry.Build();
+            ApplyingDry.Build();
         }
     }
 }
