@@ -12,6 +12,13 @@ namespace ZeroToHero.BestPractices.TinyLink.Infrastructure
 
         public DbSet<Link> TinyLinks { get; set; }
         public DbSet<Visit> Visits { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Link>()
+                .HasIndex(l => l.Hash)
+                .IsUnique();
+        }
     }
     
 }

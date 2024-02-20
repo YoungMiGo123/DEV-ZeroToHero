@@ -3,7 +3,7 @@ using ZeroToHero.BestPractices.TinyLink.Models.Entities;
 
 namespace ZeroToHero.BestPractices.TinyLink.Infrastructure.Repositories
 {
-    public class TinyLinkRepository(TinyLinkDatabase _tinyLinkDatabase) : ITinyLinkRepository
+    public class UrlShorteningRepository(TinyLinkDatabase _tinyLinkDatabase) : IUrlShorteningRepository
     {
         public async Task<Link> AddLink(Link link)
         {
