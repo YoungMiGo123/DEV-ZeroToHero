@@ -8,13 +8,13 @@ using ZeroToHero.BestPractices.TinyLink.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var cs = builder.Configuration.GetConnectionString("DefaultConnection");
-var directory = Directory.GetParent("..\\..\\..\\TinyLinkDB.db");
-builder.Services.AddDbContext<TinyLinkDatabase>(options => options.UseSqlite(cs));
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<TinyLinkDatabase>(options => options.UseSqlite(connectionString));
 
-builder.Services.AddScoped<ITinyLinkRepository, TinyLinkRepository>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IUrlShorteningRepository, UrlShorteningRepository>();
 builder.Services.AddScoped<IVisitRepository, VisitRepository>();
-builder.Services.AddScoped<ITinyLinkService, TinyLinkService>();    
+builder.Services.AddScoped<IUrlShorteningService, UrlShorteningService>();    
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

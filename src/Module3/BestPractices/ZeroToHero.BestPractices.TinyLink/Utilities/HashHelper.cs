@@ -7,9 +7,11 @@ namespace ZeroToHero.BestPractices.TinyLink.Utilities
 {
     public class HashHelper
     {
+        private static int _hashLength = 8;
         public static string GenerateHash(string input)
         {
-            return GenerateSha512(input)[..8];
+            var inputWihSalt = $"{input}{Guid.NewGuid()}";
+            return GenerateSha512(inputWihSalt)[.._hashLength];
         }
         private static string GenerateSha512(string input)
         {
