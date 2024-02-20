@@ -1,7 +1,3 @@
-Certainly! Below is a README template for your C# course solution project:
-
----
-
 # DEV-ZeroToHero
 
 Welcome to DEV-ZeroToHero! This solution is designed to guide you from zero to hero in C# development. Whether you're just starting or looking to refine your skills, this project provides a comprehensive set of exercises and examples across various project types.
