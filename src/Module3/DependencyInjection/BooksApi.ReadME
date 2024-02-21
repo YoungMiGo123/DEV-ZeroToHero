@@ -1,0 +1,72 @@
+# Books API README
+
+Welcome to the Books API! This API allows you to manage books in a library, including loaning books, returning books, and checking the availability of books in the store. It also includes user functionality to keep track of who loaned the book and who returned it using ASP.NET Identity.
+
+## Features
+
+- **Manage Books:** Add, retrieve, update, and delete books from the library database.
+- **Loan Books:** Loan out a book from the library, with user tracking.
+- **Return Books:** Return a previously loaned book to the library, with user tracking.
+- **Check Book Availability:** Check if a specific book is available in the library store.
+
+## Entities
+
+### Book
+
+Represents a book in the library.
+
+- **Id:** Unique identifier for the book.
+- **Title:** Title of the book.
+- **Author:** Author of the book.
+- **Genre:** Genre of the book.
+- **IsLoanedOut:** Indicates whether the book is currently loaned out.
+- **IsPopular:** Indicates whether the book is popular among readers.
+
+### User
+
+Represents a user of the system.
+
+- **Id:** Unique identifier for the user.
+- **Username:** Username of the user.
+- **Email:** Email address of the user.
+
+### UserBook
+
+Represents the association between users and books, indicating which user has borrowed which book and when.
+
+- **Id:** Unique identifier for the user-book association.
+- **UserId:** Foreign key referencing the User table.
+- **BookId:** Foreign key referencing the Book table.
+- **BorrowedAt:** Timestamp indicating when the book was borrowed.
+- **ReturnedAt:** Timestamp indicating when the book was returned (nullable).
+
+With this addition, users can borrow multiple books, and each book can be borrowed by multiple users. The `BorrowedAt` and `ReturnedAt` fields allow tracking when books were borrowed and returned, respectively.
+
+
+
+## Tasks:
+* 1. Create the entities
+* 2.1 Create the database 
+* 2.2 Create the repository to handle CRUD operations 
+* 2.3 Create the different services that use the repositories to implement the functionality 
+* 3. Create new endpoints that exposes the functionality
+
+
+
+## Dependencies
+
+- .NET Core 3.1 or later
+- Entity Framework Core
+- SQL Server (or any other supported database)
+- ASP.NET Identity
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
