@@ -5,17 +5,16 @@ using BooksApi.Features.Books.Validators;
 using BooksApi.Infrastructure.Contexts;
 using BooksApi.Infrastructure.Repositories;
 using FluentValidation;
-using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");
-
+//var secret = builder.Configuration.GetConnectionString("DefaultConnectionString");
+//var connectionString = await SecretsManager.GetSecret(secret);
+var connectionString = builder.Configuration.GetConnectionString("LocalConnectionString");
 builder.Services.AddDbContext<AppDbContext>(x =>
     x.UseSqlServer(connectionString)
 );

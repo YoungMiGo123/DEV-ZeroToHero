@@ -1,6 +1,7 @@
 ﻿using BooksApi.Core.Entities;
 using BooksApi.Core.Models;
 using BooksApi.Infrastructure.Contexts;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Globalization;
 
@@ -10,6 +11,8 @@ namespace BooksApi.Core.Utility
     {
         public async Task SeedDatabase()
         {
+            _context.Database.Migrate();
+
             if (!_context.Books.Any())
             {
                 var bookSeedModels = GetBookSeedModels();
