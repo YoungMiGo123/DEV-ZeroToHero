@@ -53,7 +53,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.BestPractices.Ti
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DepencyInjection", "DepencyInjection", "{5E1217CA-C308-4DCE-ABA1-AEE3D78633E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZeroToHero.DI.Console", "src\Module3\DependencyInjection\ZeroToHero.DI.Console\ZeroToHero.DI.Console.csproj", "{B6C2E590-155D-4B1F-B8FB-5E8952B7854A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZeroToHero.DI.Console", "src\Module3\DependencyInjection\ZeroToHero.DI.Console\ZeroToHero.DI.Console.csproj", "{B6C2E590-155D-4B1F-B8FB-5E8952B7854A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{3EEAA64E-9569-4D9B-8979-B52C762FCAF7}"
+	ProjectSection(SolutionItems) = preProject
+		src\Module3\DependencyInjection\BooksApi.ReadME = src\Module3\DependencyInjection\BooksApi.ReadME
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApi", "BooksApi\BooksApi.csproj", "{219B08B0-9D0B-4B7C-8B7D-412AF0E32536}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +136,10 @@ Global
 		{B6C2E590-155D-4B1F-B8FB-5E8952B7854A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6C2E590-155D-4B1F-B8FB-5E8952B7854A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6C2E590-155D-4B1F-B8FB-5E8952B7854A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{219B08B0-9D0B-4B7C-8B7D-412AF0E32536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{219B08B0-9D0B-4B7C-8B7D-412AF0E32536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{219B08B0-9D0B-4B7C-8B7D-412AF0E32536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{219B08B0-9D0B-4B7C-8B7D-412AF0E32536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,6 +168,7 @@ Global
 		{5F978E73-D367-4013-B4C7-53739AACC79A} = {012BD45A-6348-4282-BFA3-3527F4BB9FA6}
 		{5E1217CA-C308-4DCE-ABA1-AEE3D78633E7} = {47D5CFD1-D8A7-41E0-B3DA-D15E3A2F89F5}
 		{B6C2E590-155D-4B1F-B8FB-5E8952B7854A} = {5E1217CA-C308-4DCE-ABA1-AEE3D78633E7}
+		{219B08B0-9D0B-4B7C-8B7D-412AF0E32536} = {3EEAA64E-9569-4D9B-8979-B52C762FCAF7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B4CBC0E-4F31-47FE-AD4A-529D5EEA65E1}

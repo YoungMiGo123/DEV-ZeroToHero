@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=TestingBooksApi@123$ # Environment variable for password (replace with actual password)
+      - MSSQL_USERNAME=SA  # Environment variable for username (replace with actual username)
+      - MSSQL_PID=Express  # Optional: Set SQL Server process identifier
+    ports:
+      - "1433:1433"  # Maps container port 1433 to host port 1433 for access
+    volumes:
+      - mssql_data:/var/opt/mssql/data
+
+volumes:
+  mssql_data: {}
